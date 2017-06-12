@@ -1,0 +1,16 @@
+<div ng-controller="listcontroller" ng-init="getlist();">
+	<select ng-model="selectedItem" ng-change="changeItem();"
+			ng-options="item as item.name for item in list">
+	</select>
+	
+	<table class ='table'>
+	
+	<tr>Name</tr>
+	
+  <tr ng-repeat="x in player">
+    <td>{{ x.name }}</td>
+ 
+  </tr>
+</table>
+
+</div>

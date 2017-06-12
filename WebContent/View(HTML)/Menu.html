@@ -1,0 +1,18 @@
+<div ng-controller="MenuController">
+	<div ng-bind="Duy"></div>
+	<div ng-bind="Duy3"></div>
+	<ul style="list-style-type: none">
+		<li><input type="text" ng-model="Duy"></input></li>
+		<li><input type="text" ng-model="Duy3"></input></li>
+	</ul>
+
+	<nav>
+		<ul class="nav nav-pills">
+			<li ng-repeat="Menu in Menus" data-toggle="tab"><a
+				href="#{{Menu.name}}">{{Menu.id}}</a></li>
+		</ul>
+
+	</nav>
+
+
+</div>

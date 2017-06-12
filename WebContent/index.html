@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css -->
+
+<link rel="stylesheet" href="lib\bootstrap\bootstrap.min.css"></link>
+<link rel="stylesheet" href="css/index.css"></link>
+</head>
+<body ng-app="app">
+	Phương Duy
+	<!-- Navigator -->
+	<div ng-controller="NavigatorController" ng-init="getAllMenus();">
+	 <ul class="nav navbar-nav">
+	 
+	<li ng-repeat="Menu in Menus" ><a href="#{{Menu.url}}">{{Menu.name}}</a></li>
+		<!-- View -->
+	<div ng-view></div>
+	</ul>
+	
+
+	
+	</div>
+		<!-- javascript -->
+		<!-- Phải theo đúng thứ tự -->
+		<script src="lib/jquery.min.js"></script>
+
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular/angular-route.js"></script>
+
+		<script src="lib/bootstrap/bootstrap.min.js"></script>
+		<!-- js -->
+		<script src="js/app.js"></script>
+		<script src="js/Service/MenuService.js"></script>
+	<script src="js/Contronller/MenuController.js"></script>
+		<script src="js/Service/NavigatorService.js"></script>
+		<script src="js/Contronller/NavigatorController.js"></script>
+		
+	 <!-- the thao -->
+		
+		<script src="js/Service/listservice.js"></script>
+		<script src="js/Contronller/listcontroller.js"></script>
+</body>
+</html>
